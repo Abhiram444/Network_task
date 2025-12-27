@@ -1,0 +1,37 @@
+#!/bin/bash
+
+echo "=============================="
+echo "NETWORK TASK - SIMPLE COMMANDS"
+echo "=============================="
+
+echo ""
+echo "1) IP address of domain guvi.in"
+nslookup guvi.in
+
+echo ""
+echo "2) CPU usage"
+top -b -n 1 | head -20
+
+echo ""
+echo "3) Memory usage"
+free -h
+
+echo ""
+echo "4) Server uptime"
+uptime
+
+echo ""
+echo "5) Connectivity test (ping)"
+ping -c 4 guvi.in
+
+echo ""
+echo "6) Check if port 9000 is open on local server"
+netstat -tuln | grep 9000
+
+echo ""
+echo "7) Test application locally on port 9000"
+curl http://localhost:9000
+
+echo ""
+echo "TASK COMPLETED"
+
